@@ -8,6 +8,9 @@ function main() {
 	#copy mpv configs
 	rsync -av ./mpv ~/.config/
 
+	#copy mcomix configs
+	rsync -av ./mcomix ~/.config/
+
 }
 
 main $@
