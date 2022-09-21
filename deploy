@@ -8,9 +8,14 @@ function main() {
 	#copy mpv configs
 	rsync -av ./mpv ~/.config/
 
-	#copy mcomix configs
-	rsync -av ./mcomix ~/.config/
+	#these are the optional configs
+	if [ "$1" == "all" ]; then
+		#copy mcomix configs
+		rsync -av ./mcomix ~/.config/
 
+		#copy tmux config
+		rsync -av ./tmux/.tmux.conf ~/
+	fi
 }
 
 main $@
