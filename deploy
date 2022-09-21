@@ -1,0 +1,13 @@
+#!/bin/bash
+
+function main() {
+	
+	#copy vimrc
+	rsync -av ./vim/.vimrc ~/
+
+	#copy mpv configs
+	rsync -av ./mpv ~/.config/
+
+}
+
+main $@
