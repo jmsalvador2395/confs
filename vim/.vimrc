@@ -7,6 +7,9 @@ set noswapfile
 set noundofile
 set autoindent
 set scrolloff=10
+set laststatus=2
+set statusline=%!getcwd()
+set tabpagemax=100
 syntax on
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
