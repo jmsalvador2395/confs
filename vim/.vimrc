@@ -11,6 +11,8 @@ set laststatus=2
 set statusline=%!getcwd()
 set tabpagemax=100
 set expandtab
+set ignorecase
+set smartcase
 syntax on
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
