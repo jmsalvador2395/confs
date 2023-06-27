@@ -15,6 +15,8 @@ set ignorecase
 set smartcase
 syntax on
 
+set pastetoggle=<F3>
+
 " Smart way to move between panes
 map <up> <C-w><up>
 map <down> <C-w><down>
