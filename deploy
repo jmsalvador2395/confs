@@ -3,18 +3,18 @@
 function main() {
 	
 	#copy vimrc
-	rsync -av ./vim/.vimrc ~/
+	rsync -a --progress ./vim/.vimrc ~/
 
 	#copy tmux config
-	rsync -av ./tmux/.tmux.conf ~/
+	rsync -a --progress ./tmux/.tmux.conf ~/
 
 	#these are the optional configs
 	if [ "$1" == "all" ]; then
 		#copy mcomix configs
-		rsync -av ./mcomix ~/.config/
+		rsync -a -progress ./mcomix ~/.config/
 
 		#copy mpv configs
-		rsync -av ./mpv ~/.config/
+		rsync -a -progress ./mpv ~/.config/
 	fi
 }
 

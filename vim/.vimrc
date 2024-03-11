@@ -23,8 +23,8 @@ map <down> <C-w><down>
 map <left> <C-w><left>
 map <right> <C-w><right>
 
-noremap <C-h> gT
-noremap <C-l> gt
+noremap <PageUp> gT
+noremap <PageDown> gt
 
 let g:netrw_liststyle=3
 let g:netrw_banner = 0
