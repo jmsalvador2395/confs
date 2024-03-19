@@ -26,9 +26,7 @@ map <C-j> 10j
 map <C-k> 10k
 
 nnoremap <C-o> :tabnext<CR>
-nnoremap <C-h> :tabprev<CR>
-
-
+nnoremap <C-y> :tabprev<CR>
 
 let g:netrw_liststyle=3
 let g:netrw_banner = 0
