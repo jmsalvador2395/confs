@@ -22,6 +22,8 @@ map <up> <C-w><up>
 map <down> <C-w><down>
 map <left> <C-w><left>
 map <right> <C-w><right>
+map <C-j> 10j
+map <C-k> 10k
 
 nnoremap <C-o> :tabnext<CR>
 nnoremap <C-h> :tabprev<CR>
