@@ -14,6 +14,8 @@ set expandtab
 set ignorecase
 set smartcase
 syntax on
+set colorcolumn=72
+hi ColorColumn ctermbg=lightcyan guibg=blue
 
 set pastetoggle=<F3>
 
