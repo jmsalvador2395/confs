@@ -7,12 +7,13 @@ set noswapfile
 set noundofile
 set autoindent
 set scrolloff=10
-set laststatus=2
-set statusline=%!getcwd()
 set tabpagemax=100
 set expandtab
 set ignorecase
 set smartcase
+set ruler
+set laststatus=2
+set statusline=%F%m%r%h%w\ [LINE:%l/%L]\ [COL:%c]
 syntax on
 set colorcolumn=72
 hi ColorColumn ctermbg=lightcyan guibg=blue
