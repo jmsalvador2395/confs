@@ -8,6 +8,9 @@ function main() {
 	#copy tmux config
 	rsync -a --progress ./tmux/.tmux.conf ~/
 
+	# deploy .[something]rc files
+	rsync -a --progress ./rc/ ~/
+
 	#these are the optional configs
 	if [ "$1" == "all" ]; then
 		#copy mcomix configs
