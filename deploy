@@ -12,7 +12,7 @@ function main() {
 	rsync -a --progress ./rc/ ~/
 
     # copy nvim config
-    rsync -a --progress ./nvim ~/.config/nvim
+    rsync -a --progress ./nvim ~/.config/
 
 	#these are the optional configs
 	if [ "$1" == "all" ]; then
