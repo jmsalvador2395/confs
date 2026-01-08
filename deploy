@@ -11,6 +11,9 @@ function main() {
 	# deploy .[something]rc files
 	rsync -a --progress ./rc/ ~/
 
+    # copy nvim config
+    rsync -a --progress ./nvim ~/.config/nvim
+
 	#these are the optional configs
 	if [ "$1" == "all" ]; then
 		#copy mcomix configs
