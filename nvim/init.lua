@@ -51,7 +51,6 @@ vim.api.nvim_create_autocmd("VimEnter", {
     api.tree.open()
   end,
 })
-
 require("nvim-tree").setup({
   tab = {
     sync = {
@@ -60,6 +59,36 @@ require("nvim-tree").setup({
     },
   },
 })
+
+require("nvim-tree").setup({
+  on_attach = function(bufnr)
+    local api = require("nvim-tree.api")
+
+    local function opts(desc)
+      return {
+        desc = "nvim-tree: " .. desc,
+        buffer = bufnr,
+        noremap = true,
+        silent = true,
+        nowait = true,
+      }
+    end
+
+    vim.keymap.set("n", "t", api.node.open.tab, opts("Open in new tab"))
+  end,
+})
+
+vim.api.nvim_create_autocmd("TabNewEntered", {
+  callback = function()
+    local view = require("nvim-tree.view")
+    if not view.is_visible() then
+      vim.cmd("NvimTreeOpen")
+    end
+  end,
+})
+
+vim.opt.termguicolors = true
+vim.cmd.colorscheme("vim")
 
 require("options")
 
