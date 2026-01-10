@@ -60,9 +60,26 @@ require("nvim-tree").setup({
   },
 })
 
+-- require("nvim-tree").setup({
+--   on_attach = function(bufnr)
+--     local api = require("nvim-tree.api")
+-- 
+--     local function opts(desc)
+--       return {
+--         desc = "nvim-tree: " .. desc,
+--         buffer = bufnr,
+--         noremap = true,
+--         silent = true,
+--         nowait = true,
+--       }
+--     end
+
 require("nvim-tree").setup({
   on_attach = function(bufnr)
     local api = require("nvim-tree.api")
+
+    -- IMPORTANT: load default mappings
+    api.config.mappings.default_on_attach(bufnr)
 
     local function opts(desc)
       return {
@@ -74,6 +91,7 @@ require("nvim-tree").setup({
       }
     end
 
+    -- Your custom mapping
     vim.keymap.set("n", "t", api.node.open.tab, opts("Open in new tab"))
   end,
 })
