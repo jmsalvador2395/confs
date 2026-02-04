@@ -7,6 +7,8 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.indentexpr = ""
+vim.opt.smartindent = false
+vim.opt.cindent = false
 
 
 -- Files & backups

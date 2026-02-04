@@ -108,5 +108,18 @@ vim.api.nvim_create_autocmd("TabNewEntered", {
 vim.opt.termguicolors = true
 vim.cmd.colorscheme("vim")
 
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*",
+  callback = function()
+    vim.opt_local.indentexpr = ""
+    vim.opt_local.smartindent = false
+    vim.opt_local.cindent = false
+    vim.opt_local.autoindent = true
+  end,
+})
+
+vim.opt.termguicolors = true
+vim.cmd.colorscheme("vim")
+
 require("options")
 
